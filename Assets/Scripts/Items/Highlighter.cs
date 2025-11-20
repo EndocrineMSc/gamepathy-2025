@@ -1,30 +1,45 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace Items
 {
-    public class Highlighter : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+    public class Highlighter : MonoBehaviour
     {
         [SerializeField] private Sprite itemDefault;
         [SerializeField] private Sprite itemHighlighted;
+        [SerializeField] private InteractableItem item;
 
-        private SpriteRenderer spriteRenderer;
+        private SpriteRenderer _spriteRenderer;
 
         public void Awake()
         {
-            spriteRenderer = GetComponent<SpriteRenderer>();
+            _spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
-        public void OnPointerEnter(PointerEventData eventData)
+        private void OnMouseEnter()
         {
-            spriteRenderer.sprite = itemHighlighted;
+            _spriteRenderer.sprite = itemHighlighted;
         }
 
-        public void OnPointerExit(PointerEventData eventData)
+        private void OnMouseExit()
         {
-            if (Input.GetButtonDown("Highlight")) return;
-
-            spriteRenderer.sprite = itemDefault;
+            if (Input.GetKey(KeyCode.Space)) return;
+            _spriteRenderer.sprite = itemDefault;
         }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                _spriteRenderer.sprite = itemHighlighted;
+            }
+
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                _spriteRenderer.sprite = itemDefault;
+            }
+        }
+
     }
 }
