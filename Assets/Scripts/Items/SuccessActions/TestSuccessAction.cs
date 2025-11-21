@@ -6,6 +6,7 @@ namespace Items.SuccessActions
     {
         public override void OnSuccess()
         {
+            base.OnSuccess();
             Debug.Log("Success");
         }
     }

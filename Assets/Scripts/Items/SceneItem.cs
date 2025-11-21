@@ -1,4 +1,6 @@
 using System;
+using Character;
+using Managers;
 using UnityEngine;
 
 namespace Items
@@ -17,6 +19,22 @@ namespace Items
             _successAction = () => GetComponent<ItemSuccessActionBase>().OnSuccess();
         }
 
+        private void OnEnable()
+        {
+            PlayerClickNavigation.TargetReached.AddListener(OnPlayerNav);
+        }
+
+        private void OnDisable()
+        {
+            PlayerClickNavigation.TargetReached.RemoveListener(OnPlayerNav);
+        }
+
+        public void OnMouseDown()
+        {
+            Debug.Log("OnMouseDown");
+            SceneStateManager.Instance.targetSceneItem = this;
+        }
+
         public void OnItemDropped(InventoryItem inventoryItem)
         {
             if (inventoryItem == successItem)
@@ -30,9 +48,10 @@ namespace Items
             // Do fail stuff
         }
 
-        public void OnPlayerNav()
+        private void OnPlayerNav()
         {
-            _successAction();
+            Debug.Log("Player Nav");
+            if (SceneStateManager.Instance.targetSceneItem == this) _successAction();
         }
     }
 }

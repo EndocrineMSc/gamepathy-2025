@@ -6,7 +6,7 @@ namespace Items
 {
     public class UiItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
-        [SerializeField] private InventoryItem item;
+        [field: SerializeField] public InventoryItem Item { get; private set; }
 
         private Canvas _canvas;
         private CanvasGroup _canvasGroup;
@@ -25,7 +25,7 @@ namespace Items
             _originalParent = transform.parent;
             transform.SetParent(_canvas.transform);
 
-            SceneStateManager.ItemSelected.Invoke(item);
+            SceneStateManager.ItemSelected.Invoke(Item);
 
             _canvasGroup.blocksRaycasts = false;
         }
@@ -45,7 +45,7 @@ namespace Items
             if (hit.collider != null)
             {
                 var interactable = hit.collider.GetComponent<SceneItem>();
-                if (interactable != null) interactable.OnItemDropped(item);
+                if (interactable != null) interactable.OnItemDropped(Item);
             }
 
             SceneStateManager.ItemSelected.Invoke(InventoryItem.None);

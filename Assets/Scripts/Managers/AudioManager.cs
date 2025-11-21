@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -17,6 +19,8 @@ namespace Managers
         [field: SerializeField] public float SoundVolume { get; private set; } = 1;
 
         private AudioSource _sfxVolumePreviewSound;
+
+        private List<AudioSource> _voiceLines = new();
 
         #endregion
 
@@ -64,16 +68,30 @@ namespace Managers
         }
 
         //Plays a Sound Effect according to the enum index if it isn't playing already
-        public static void PlayOneShot(AudioSource audioSource)
+        public static void PlayOneShot(AudioSource audioSource, bool isVoiceLine = false)
         {
             if (!audioSource.isPlaying)
                 audioSource.Play();
+
+            if (isVoiceLine)
+                Instance._voiceLines.Add(audioSource);
         }
 
         //Plays a Sound Effect according to the enum index
         public void PlayUnlimited(AudioSource audioSource)
         {
             audioSource.Play();
+        }
+
+        public void PlayBreaking(AudioSource audioSource)
+        {
+            foreach (var voiceLine in _voiceLines.Where(voiceLine => voiceLine.isPlaying && voiceLine != audioSource))
+                voiceLine.Stop();
+
+            if (audioSource.isPlaying) return;
+
+            audioSource.Play();
+            _voiceLines.Add(audioSource);
         }
 
         public void SetMasterVolume(float volume)
@@ -104,6 +122,12 @@ namespace Managers
         private static float GetLogCorrectedVolume(float volume)
         {
             return volume > 0 ? Mathf.Log(volume) * 20f : -80f;
+        }
+
+        private void Update()
+        {
+            var vlCopy = _voiceLines.Where(voiceLine => voiceLine.isPlaying).ToList();
+            _voiceLines = vlCopy;
         }
 
         #endregion

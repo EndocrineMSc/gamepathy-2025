@@ -11,6 +11,8 @@ namespace Managers
         public static UnityEvent<InventoryItem> NewItemAvailable = new();
         public static UnityEvent<InventoryItem> NewItemUnavailable = new();
         public static UnityEvent<InventoryItem> ItemListChanged = new();
+
+        public SceneItem targetSceneItem;
         public static SceneStateManager Instance { get; private set; }
 
         public List<InventoryItem> AvailableItems { get; } = new();
