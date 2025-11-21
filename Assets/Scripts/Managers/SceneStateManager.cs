@@ -1,17 +1,21 @@
+using System.Collections.Generic;
 using Items;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 
 namespace Managers
 {
     public class SceneStateManager : MonoBehaviour
     {
-        public static SceneStateManager Instance {get; private set;}
-        
-        public UnityEvent<InventoryItem> onItemSelectionChanged = new();
-        
-        public InventoryItem SelectedItem { get; private set;}
+        public static UnityEvent<InventoryItem> ItemSelected = new();
+        public static UnityEvent<InventoryItem> NewItemAvailable = new();
+        public static UnityEvent<InventoryItem> NewItemUnavailable = new();
+        public static UnityEvent<InventoryItem> ItemListChanged = new();
+        public static SceneStateManager Instance { get; private set; }
+
+        public List<InventoryItem> AvailableItems { get; } = new();
+
+        public InventoryItem SelectedItem { get; private set; }
 
         private void Awake()
         {
@@ -19,20 +23,36 @@ namespace Managers
 
             Instance = this;
         }
-        
+
         private void OnEnable()
         {
-            onItemSelectionChanged.AddListener(OnItemSelectionChanged);
+            ItemSelected.AddListener(OnItemSelected);
+            NewItemAvailable.AddListener(OnNewItemAvailable);
+            NewItemUnavailable.AddListener(OnNewItemUnavailable);
         }
 
         private void OnDisable()
         {
-            onItemSelectionChanged.RemoveListener(OnItemSelectionChanged);
+            ItemSelected.RemoveListener(OnItemSelected);
+            NewItemAvailable.RemoveListener(OnNewItemAvailable);
+            NewItemUnavailable.RemoveListener(OnNewItemUnavailable);
         }
 
-        private void OnItemSelectionChanged(InventoryItem item)
+        private void OnItemSelected(InventoryItem item)
         {
             SelectedItem = item;
+        }
+
+        private void OnNewItemAvailable(InventoryItem item)
+        {
+            AvailableItems.Add(item);
+            ItemListChanged.Invoke(item);
+        }
+
+        private void OnNewItemUnavailable(InventoryItem item)
+        {
+            AvailableItems.Remove(item);
+            ItemListChanged.Invoke(item);
         }
     }
 }
