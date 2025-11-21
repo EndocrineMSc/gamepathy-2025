@@ -1,4 +1,5 @@
 using Items;
+using Managers;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -26,7 +27,7 @@ namespace Character
 
         private void Update()
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && !PauseControl.GameIsPaused)
             {
                 // Convert mouse to world position
                 var mouseWorldPos = _cam.ScreenToWorldPoint(Input.mousePosition);
