@@ -11,6 +11,7 @@ namespace Managers
         public static UnityEvent<InventoryItem> NewItemAvailable = new();
         public static UnityEvent<InventoryItem> NewItemUnavailable = new();
         public static UnityEvent<InventoryItem> ItemListChanged = new();
+        public static UnityEvent<bool> ScreenChanged = new();
 
         public SceneItem targetSceneItem;
         public static SceneStateManager Instance { get; private set; }
@@ -18,6 +19,7 @@ namespace Managers
         public List<InventoryItem> AvailableItems { get; } = new();
 
         public InventoryItem SelectedItem { get; private set; }
+        public bool ExtraScreenOpen { get; private set; }
 
         private void Awake()
         {
@@ -31,6 +33,7 @@ namespace Managers
             ItemSelected.AddListener(OnItemSelected);
             NewItemAvailable.AddListener(OnNewItemAvailable);
             NewItemUnavailable.AddListener(OnNewItemUnavailable);
+            ScreenChanged.AddListener(OnScreenChanged);
         }
 
         private void OnDisable()
@@ -38,6 +41,7 @@ namespace Managers
             ItemSelected.RemoveListener(OnItemSelected);
             NewItemAvailable.RemoveListener(OnNewItemAvailable);
             NewItemUnavailable.RemoveListener(OnNewItemUnavailable);
+            ScreenChanged.RemoveListener(OnScreenChanged);
         }
 
         private void OnItemSelected(InventoryItem item)
@@ -55,6 +59,11 @@ namespace Managers
         {
             AvailableItems.Remove(item);
             ItemListChanged.Invoke(item);
+        }
+
+        private void OnScreenChanged(bool isOpen)
+        {
+            ExtraScreenOpen = isOpen;
         }
     }
 }

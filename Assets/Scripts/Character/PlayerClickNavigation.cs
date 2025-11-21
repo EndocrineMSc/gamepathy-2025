@@ -8,10 +8,9 @@ namespace Character
     public class PlayerClickNavigation : MonoBehaviour
     {
         public static UnityEvent TargetReached = new();
-        private readonly int _hashSpeed = Animator.StringToHash("Speed");
         private NavMeshAgent _agent;
-        private Animator _animator;
         private Camera _cam;
+        private SpriteRenderer _spriteRenderer;
         private bool eventSent;
         private bool ReachedTarget => !_agent.pathPending && _agent.remainingDistance <= _agent.stoppingDistance;
 
@@ -19,7 +18,7 @@ namespace Character
         {
             _cam = Camera.main;
             _agent = GetComponent<NavMeshAgent>();
-            _animator = GetComponent<Animator>();
+            _spriteRenderer = GetComponent<SpriteRenderer>();
 
             _agent.updateRotation = false;
             _agent.updateUpAxis = false;
@@ -27,6 +26,8 @@ namespace Character
 
         private void Update()
         {
+            if (SceneStateManager.Instance.ExtraScreenOpen) return;
+
             if (Input.GetMouseButtonDown(0) && !PauseControl.GameIsPaused)
             {
                 // Convert mouse to world position
@@ -35,17 +36,14 @@ namespace Character
                 // Lock Z (NavMesh plane)
                 mouseWorldPos.z = 0f;
 
+                var dir = mouseWorldPos - transform.position;
+                _spriteRenderer.flipX = dir.x < transform.position.x;
+
                 // Move agent
                 _agent.SetDestination(mouseWorldPos);
                 eventSent = false;
                 Debug.Log("Moving to: " + mouseWorldPos);
             }
-
-            // Update animation parameter based on velocity
-            /*
-            var speedPercent = _agent.velocity.magnitude / _agent.speed;
-            _animator.SetFloat(_hashSpeed, speedPercent);
-            */
 
             if (!ReachedTarget || eventSent) return;
 
