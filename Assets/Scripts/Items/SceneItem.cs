@@ -11,6 +11,7 @@ namespace Items
     {
         [SerializeField] private InteractableItem item;
         [SerializeField] private InventoryItem successItem;
+        private bool _isSuccess;
 
         private Action _successAction;
 
@@ -51,7 +52,10 @@ namespace Items
         private void OnPlayerNav()
         {
             Debug.Log("Player Nav");
-            if (SceneStateManager.Instance.targetSceneItem == this) _successAction();
+            if (SceneStateManager.Instance.targetSceneItem != this || _isSuccess) return;
+
+            _successAction();
+            _isSuccess = true;
         }
     }
 }

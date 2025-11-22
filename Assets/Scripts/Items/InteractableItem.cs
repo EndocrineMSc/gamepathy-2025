@@ -2,15 +2,18 @@ namespace Items
 {
     public enum InteractableItem
     {
-        Desk,
-        Movies,
-        WeaponCloset,
-        LockBox,
-        Book,
-        ClothesRack,
-        Hat,
-        Hay,
-        NurseUniform,
+        Drawer,
+        Shelf,
+        Safe,
         Sofa,
+        LockBox,
+        Gum,
+        Ballpoint,
+        Book,
+        Flask,
+        CassetteXxx,
+        Cassette,
+        Box,
+        Calender
     }
 }

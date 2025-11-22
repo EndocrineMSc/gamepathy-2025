@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: 3f0887d6c1f82014787c2c3293df7da4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7445174941877490680
+    second: Safe zahlenschloss_0
+  - first:
+      213: -1169722280501231882
+    second: Safe zahlenschloss_1
+  - first:
+      213: -1870829222887405692
+    second: Safe zahlenschloss_2
+  - first:
+      213: 4020419658851244013
+    second: Safe zahlenschloss_3
+  - first:
+      213: -8962038926063227400
+    second: Safe zahlenschloss_4
+  - first:
+      213: 2934438912963143163
+    second: Safe zahlenschloss_5
+  - first:
+      213: 6354662340149386759
+    second: Safe zahlenschloss_6
+  - first:
+      213: -1518779863336332278
+    second: Safe zahlenschloss_7
+  - first:
+      213: 6899925298044863036
+    second: Safe zahlenschloss_8
+  - first:
+      213: -5494797754458204837
+    second: Safe zahlenschloss_9
+  - first:
+      213: -8130363338543109562
+    second: Safe zahlenschloss_10
+  - first:
+      213: 7240618816538572759
+    second: Safe zahlenschloss_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Safe zahlenschloss_0
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 894
+        width: 155
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80ca0ca26dc6da890800000000000000
+      internalID: -7445174941877490680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe zahlenschloss_1
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 894
+        width: 155
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fe3dd888cf44cfe0800000000000000
+      internalID: -1169722280501231882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe zahlenschloss_2
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 894
+        width: 156
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 487406edbba7906e0800000000000000
+      internalID: -1870829222887405692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe zahlenschloss_3
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 894
+        width: 156
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de753dde0666bc730800000000000000
+      internalID: 4020419658851244013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe zahlenschloss_4
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 229
+        width: 384
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fd27c4641170a380800000000000000
+      internalID: -8962038926063227400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe zahlenschloss_5
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 230
+        width: 384
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf5604ed4a839b820800000000000000
+      internalID: 2934438912963143163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe zahlenschloss_6
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 229
+        width: 384
+        height: 621
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70e182cdabb403850800000000000000
+      internalID: 6354662340149386759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe zahlenschloss_7
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 229
+        width: 384
+        height: 621
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0452d9d2c53ceae0800000000000000
+      internalID: -1518779863336332278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe zahlenschloss_8
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 133
+        width: 155
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3202be408571cf50800000000000000
+      internalID: 6899925298044863036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe zahlenschloss_9
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 133
+        width: 155
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5597e41e8e8eb3b0800000000000000
+      internalID: -5494797754458204837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe zahlenschloss_10
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 133
+        width: 156
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64a674fbe952b2f80800000000000000
+      internalID: -8130363338543109562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Safe zahlenschloss_11
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 133
+        width: 156
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d77ac18378db7460800000000000000
+      internalID: 7240618816538572759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Safe zahlenschloss_0: -7445174941877490680
+      Safe zahlenschloss_1: -1169722280501231882
+      Safe zahlenschloss_10: -8130363338543109562
+      Safe zahlenschloss_11: 7240618816538572759
+      Safe zahlenschloss_2: -1870829222887405692
+      Safe zahlenschloss_3: 4020419658851244013
+      Safe zahlenschloss_4: -8962038926063227400
+      Safe zahlenschloss_5: 2934438912963143163
+      Safe zahlenschloss_6: 6354662340149386759
+      Safe zahlenschloss_7: -1518779863336332278
+      Safe zahlenschloss_8: 6899925298044863036
+      Safe zahlenschloss_9: -5494797754458204837
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
