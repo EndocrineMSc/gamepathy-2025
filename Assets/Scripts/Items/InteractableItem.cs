@@ -14,6 +14,7 @@ namespace Items
         CassetteXxx,
         Cassette,
         Box,
-        Calender
+        Calender,
+        RugFlask
     }
 }

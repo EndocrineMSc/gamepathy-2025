@@ -42,7 +42,6 @@ namespace Character
                 // Move agent
                 _agent.SetDestination(mouseWorldPos);
                 eventSent = false;
-                Debug.Log("Moving to: " + mouseWorldPos);
             }
 
             if (!ReachedTarget || eventSent) return;

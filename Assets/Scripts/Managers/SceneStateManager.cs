@@ -13,8 +13,11 @@ namespace Managers
         public static UnityEvent<InventoryItem> ItemListChanged = new();
         public static UnityEvent<bool> ScreenChanged = new();
         public static UnityEvent BackgroundProgress = new();
+        public static UnityEvent LockGearChanged = new();
 
         public SceneItem targetSceneItem;
+        public bool LockPuzzleSolved;
+        public bool LockPuzzleAvailable;
         public static SceneStateManager Instance { get; private set; }
 
         public List<InventoryItem> AvailableItems { get; } = new();

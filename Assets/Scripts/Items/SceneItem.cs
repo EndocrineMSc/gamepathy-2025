@@ -32,27 +32,21 @@ namespace Items
 
         public void OnMouseDown()
         {
-            Debug.Log("OnMouseDown");
             SceneStateManager.Instance.targetSceneItem = this;
         }
 
         public void OnItemDropped(InventoryItem inventoryItem)
         {
-            if (inventoryItem == successItem)
-            {
-                Debug.Log("richtiges item");
-                _successAction();
-                return;
-            }
+            if (inventoryItem == successItem) _successAction();
 
-            Debug.Log("falsches item");
             // Do fail stuff
         }
 
         private void OnPlayerNav()
         {
-            Debug.Log("Player Nav");
             if (SceneStateManager.Instance.targetSceneItem != this || _isSuccess) return;
+
+            if (successItem != InventoryItem.None && SceneStateManager.Instance.SelectedItem != successItem) return;
 
             _successAction();
             _isSuccess = true;
